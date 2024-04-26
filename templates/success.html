@@ -1,0 +1,43 @@
+{% extends 'index.html' %} {% block 'body' %}
+{% block content %}
+    <!-- Leave this block empty to block the content -->
+{% endblock %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submitted Successfully</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Form Submitted Successfully!</h2>
+        <p>Thank you for your submission.</p>
+        <p>We will get back to you as soon as possible.</p>
+    </div>
+</body>
+</html>
+{% endblock %}

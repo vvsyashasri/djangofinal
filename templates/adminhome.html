@@ -1,0 +1,182 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SMS PROJECT</title>
+<!--     <link type="text/css"  rel="stylesheet" href="{% static  'css/style.css'  %}"  />-->
+<!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+  <style>
+        /* Your custom styles go here */
+        .navbar {
+            font-size: 18px;
+            color: black;  /* Adjust the font size as needed */
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            font-size: 18px; /* Adjust the font size as needed */
+            font-weight: bold;
+            color: black;
+
+        }
+<!--    input[type=text] {-->
+<!--  width: 140px;-->
+<!--  -webkit-transition: width 0.4s ease-in-out;-->
+<!--  transition: width 0.4s ease-in-out;-->
+<!--}-->
+
+<!--/* When the input field gets focus, change its width to 100% */-->
+<!--input[type=text]:focus {-->
+<!--  width: 90%;-->
+<!--}-->
+     body {
+            background-color: lightyellow; /* Set the background color to light blue */
+        }
+/* styles.css */
+.img-reduced {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+
+    </style>
+</head>
+<body bgcolor="lightgrey" >
+<!--<h2 align="center">Admin Home Page</h2>-->
+<!--<br>-->
+
+<!--<a href="{% url 'adminhome' %}">Home</a>&nbsp;&nbsp;&nbsp;-->
+<!--<a href="{% url 'adminhome' %}">Change Password</a>&nbsp;&nbsp;&nbsp;-->
+<!--<a href="{% url 'viewstudents' %}">Student</a>&nbsp;&nbsp;&nbsp;-->
+<!--<a href="{% url 'viewfaculty' %}">Faculty</a>&nbsp;&nbsp;&nbsp;-->
+<!--<a href="{% url 'viewcourses' %}">Course</a>&nbsp;&nbsp;-->
+<!--<a href="{% url 'adminhome' %}">Faculty Course Mapping</a>&nbsp;&nbsp;-->
+<!--<a href="{% url 'login' %}">Logout</a>&nbsp;&nbsp;&nbsp;-->
+
+
+<!--<h3 align="top-right" style="color:green"><i>Welcome {{adminuname}}</i></h3>-->
+<!--<ul class="nav nav-tabs" style="background-color:#bea925" >-->
+<!--<br>-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light"   >
+  <a class="navbar-brand" href="#">Admin</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'adminhome' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'viewstudents' %}">Student</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{% url 'viewfaculty' %}">Faculty</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{% url 'viewcourses' %}">Course</a>
+      </li>
+<!--      <li class="nav-item dropdown">-->
+<!--                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                        Functions-->
+<!--                    </a>-->
+<!--                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->
+<!--                        <li><a class="dropdown-item" href="{% url 'viewstudents' %}">Student</a></li>-->
+<!--                        <li><a class="dropdown-item" href="{% url 'viewfaculty' %}">Faculty</a></li>-->
+<!--                        <li><a class="dropdown-item" href="{% url 'viewcourses' %}">Courses</a></li>-->
+<!--                    </ul>-->
+<!--                </li>-->
+<!--        <li class="nav-item">-->
+<!--        <a class="nav-link" href="{% url 'adminhome' %}">Faculty Course Mapping</a>-->
+<!--      </li>-->
+        <li class="nav-item">
+        <a class="nav-link" href="{% url 'login' %}">Logout</a>
+      </li>
+    </ul>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <h3 align="top-right" style="color:red"><i>Welcome,Admin {{adminuname}}</i></h3>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+  Date & Time.</button>
+    <p id="demo"></p>
+
+<script>
+
+
+
+
+
+
+    // Set session timeout duration in milliseconds (e.g., 5 minutes)
+    const SESSION_TIMEOUT = 2 * 60 * 1000; // 5 minutes
+
+    // Function to handle session timeout
+    function handleSessionTimeout() {
+      // Perform logout or session expiration action here
+      alert('Your session has timed out. Please log in again.');
+      // Redirect to logout page or perform other actions as needed
+      window.location.href = '/logout';
+    }
+
+    // Function to reset session timeout timer
+    function resetSessionTimeout() {
+      // Clear existing timeout (if any)
+      clearTimeout(window.sessionTimeout);
+      // Set new timeout
+      window.sessionTimeout = setTimeout(handleSessionTimeout, SESSION_TIMEOUT);
+    }
+
+    // Event listeners for user interactions
+    document.addEventListener('mousemove', resetSessionTimeout); // Mouse movement
+    document.addEventListener('keydown', resetSessionTimeout); // Keyboard input
+    document.addEventListener('click', resetSessionTimeout); // Clicks
+    // Add more event listeners for other user interactions as needed
+
+    // Initial setup: start session timeout timer
+    resetSessionTimeout();
+  </script>
+
+  </div>
+</nav>
+{% block content %}
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/IMAGE10.jpg' %}" class="d-block w-100" alt="..." style="max-width: 1550px; max-height: 630px;">
+<!--      <img src="{% static 'images/images1.png' %}" class="d-block w-100" alt="..." style="max-width: 1350px; max-height: 650px;">-->
+
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/download2.jpg' %}" class="d-block w-100" alt="..." style="max-width: 1550px; max-height: 630px;">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/download3.jpg' %}" class="d-block w-100" alt="..." style="max-width: 1550px; max-height: 630px;">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+  {% endblock %}
+</div>
+
+{% block 'body' %}
+
+
+{% endblock %}
+
+</ul>
+</body>
+</html>
